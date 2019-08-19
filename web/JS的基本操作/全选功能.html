@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.function
+        function btn(){
+            var el1 = document.getElementById("all");
+            var el2 = document.getElementsByClassName("sel");
+            for (var i=0;i<el2.length;i++){
+                if (el1.checked){
+                    el2[i].checked=true;
+                }else{
+                    el2[i].checked=false;
+                }
+            }
+        }
+
+        function f() {
+            var el1 = document.getElementById("all");
+            var el2 = document.getElementsByClassName("sel");
+            for (var i = 0; i < el2.length; i++) {
+                if (el1.checked) {
+                    el2[i].checked = true;
+                    alert("已设置全选，不能取消")
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<table border="1" cellspacing="0">
+    <thead>
+    <tr>
+        <th><input id="all" type="checkbox" onclick="btn()"> 全选</th>
+        <th>姓名</th>
+        <th>年纪</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td ><input class="sel" type="checkbox" onclick="f()"> </td>
+        <td>盲僧</td>
+        <td>22</td>
+    </tr>
+    <tr>
+        <td ><input class="sel" type="checkbox" onclick="f()"> </td>
+        <td>压缩</td>
+        <td>21 </tr>
+    <tr>
+        <td ><input class="sel" type="checkbox" onclick="f()"> </td>
+        <td>妖姬</td>
+        <td>14</td>
+    </tr>
+    <tr>
+        <td ><input class="sel" type="checkbox" onclick="f()"> </td>
+        <td>提莫</td>
+        <td>6</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
